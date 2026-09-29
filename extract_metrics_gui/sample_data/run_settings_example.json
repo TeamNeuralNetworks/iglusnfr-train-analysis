@@ -1,0 +1,305 @@
+{
+  "export_datetime": "2026-07-25T13:41:12.683634+02:00",
+  "script": "demo_batch_process.py",
+  "preset_name": "iglusnfr_optimized",
+  "data_root": "PPR_DATA_FINAL",
+  "out_dir": "sample_data",
+  "conditions_run": [
+    "WT_Theo",
+    "Theo_2_5_50Hz"
+  ],
+  "file_glob": "*.xlsx",
+  "n_files": 2,
+  "files": [
+    "WT_Theo_example_bouton.xlsx",
+    "Theo_2_5_50Hz_example_bouton.xlsx"
+  ],
+  "n_failures": 0,
+  "overrides": {
+    "OVERRIDE_ISI": null,
+    "OVERRIDE_BASELINE": null,
+    "OVERRIDE_N_PULSES": null
+  },
+  "condition_lookup": {
+    "DEFAULT_ISI": 0.05,
+    "DEFAULT_BASELINE": 0.998,
+    "DEFAULT_N_PULSES": 10,
+    "manifest_path": "metadata\\boutons.csv"
+  },
+  "resolved_options_by_condition": {
+    "WT_Theo": {
+      "isi_s": 0.05,
+      "baseline_s": 0.498,
+      "n_pulses": 10,
+      "peak_window_ms": 48.0,
+      "pre_zoom_s": 0.2,
+      "post_zoom_s": 0.3,
+      "options": {
+        "normalize_dff": true,
+        "bleach": true,
+        "sg_window": 9,
+        "sg_poly": 2,
+        "fit_source": "global",
+        "decay_progression_mode": "linear",
+        "anchor_final_tau": false,
+        "anchor_first_tau": false,
+        "event_model": "iglusnfr_tri",
+        "parameter_bounds": {
+          "tau_decay_fast": [
+            0.003,
+            0.008
+          ],
+          "tau_decay_slow": [
+            0.008,
+            0.035
+          ]
+        },
+        "early_events_only": 0,
+        "recut_projection": "mean",
+        "recut_oversample": 20,
+        "recut_peak_recenter": 0,
+        "recut_snippets": true,
+        "onset_method": "baseline_threshold",
+        "onset_baseline_threshold": 0.1,
+        "amplitude_floor_to_noise": true,
+        "average_amplitude_floor_to_noise": false,
+        "average_null_N": null,
+        "nnls_fit_mode": "sequential",
+        "nnls_weight_mode": "savgol",
+        "nnls_weight_tau_s": null,
+        "nnls_peak_window_s": 0.01,
+        "nnls_peak_weight": 3.0,
+        "fit_diagnostic_plot": false,
+        "huber_delta": 2.5,
+        "irls_iters": 20,
+        "nnls_last_event_tail_tau_s": "best",
+        "nnls_two_pass_guard": false,
+        "pre_zoom_s": 0.2,
+        "post_zoom_s": 0.3,
+        "f0_window_s": 1.0,
+        "peak_window_ms": 48.0,
+        "peak_avg_points": 3,
+        "pre_peak_ms": 1.0,
+        "measurement": "SAVGOL",
+        "fail_method": "SAVGOL",
+        "threshold_mode": "auto",
+        "null_N": 1.0,
+        "null_sim_max_points": 1000,
+        "null_min_post_zoom_s": 0.05,
+        "bleach_huber_delta": 3.0,
+        "bleach_tau_range_factor": [
+          0.25,
+          4.0
+        ],
+        "bleach_n_tau": 25,
+        "template_variant_select": "soft",
+        "plot": {
+          "enabled": true,
+          "traces": [
+            "raw",
+            "nnls"
+          ],
+          "figsize": [
+            10,
+            6
+          ],
+          "show_decay": true,
+          "show_onsets": true,
+          "trials": false,
+          "baseline": false,
+          "residuals": true,
+          "nnls_residual": false,
+          "nnls_n_minus_1": false,
+          "plot_peaks_details": true,
+          "param_evolution": true
+        },
+        "use_template_variants": true,
+        "template_variant_ratios": [
+          0.1,
+          0.18888888888888888,
+          0.2777777777777778,
+          0.3666666666666667,
+          0.4555555555555556,
+          0.5444444444444445,
+          0.6333333333333333,
+          0.7222222222222222,
+          0.8111111111111111,
+          0.9
+        ],
+        "template_variant_superslow_fracs": [
+          0.1,
+          0.18,
+          0.26,
+          0.33999999999999997,
+          0.42000000000000004,
+          0.5,
+          0.58,
+          0.66,
+          0.74,
+          0.82,
+          0.9
+        ],
+        "superslow_min_ratio": 1.0,
+        "allow_tau_slow_override": true,
+        "force_tau_slow_override": false,
+        "jitter_variant_ms": [
+          -2.0,
+          -1.5,
+          -1.0,
+          -0.5,
+          0.0,
+          0.5,
+          1.0,
+          1.5,
+          2.0
+        ]
+      }
+    },
+    "Theo_2_5_50Hz": {
+      "isi_s": 0.02,
+      "baseline_s": 0.498,
+      "n_pulses": 10,
+      "peak_window_ms": 18.0,
+      "pre_zoom_s": 0.2,
+      "post_zoom_s": 0.3,
+      "options": {
+        "normalize_dff": true,
+        "bleach": true,
+        "sg_window": 9,
+        "sg_poly": 2,
+        "fit_source": "global",
+        "decay_progression_mode": "linear",
+        "anchor_final_tau": false,
+        "anchor_first_tau": false,
+        "event_model": "iglusnfr_tri",
+        "parameter_bounds": {
+          "tau_decay_fast": [
+            0.003,
+            0.008
+          ],
+          "tau_decay_slow": [
+            0.008,
+            0.035
+          ]
+        },
+        "early_events_only": 0,
+        "recut_projection": "mean",
+        "recut_oversample": 20,
+        "recut_peak_recenter": 0,
+        "recut_snippets": true,
+        "onset_method": "baseline_threshold",
+        "onset_baseline_threshold": 0.1,
+        "amplitude_floor_to_noise": true,
+        "average_amplitude_floor_to_noise": false,
+        "average_null_N": null,
+        "nnls_fit_mode": "sequential",
+        "nnls_weight_mode": "savgol",
+        "nnls_weight_tau_s": null,
+        "nnls_peak_window_s": 0.01,
+        "nnls_peak_weight": 3.0,
+        "fit_diagnostic_plot": false,
+        "huber_delta": 2.5,
+        "irls_iters": 20,
+        "nnls_last_event_tail_tau_s": "best",
+        "nnls_two_pass_guard": false,
+        "pre_zoom_s": 0.2,
+        "post_zoom_s": 0.3,
+        "f0_window_s": 1.0,
+        "peak_window_ms": 18.0,
+        "peak_avg_points": 3,
+        "pre_peak_ms": 1.0,
+        "measurement": "SAVGOL",
+        "fail_method": "SAVGOL",
+        "threshold_mode": "auto",
+        "null_N": 1.0,
+        "null_sim_max_points": 1000,
+        "null_min_post_zoom_s": 0.05,
+        "bleach_huber_delta": 3.0,
+        "bleach_tau_range_factor": [
+          0.25,
+          4.0
+        ],
+        "bleach_n_tau": 25,
+        "template_variant_select": "soft",
+        "plot": {
+          "enabled": true,
+          "traces": [
+            "raw",
+            "nnls"
+          ],
+          "figsize": [
+            10,
+            6
+          ],
+          "show_decay": true,
+          "show_onsets": true,
+          "trials": false,
+          "baseline": false,
+          "residuals": true,
+          "nnls_residual": false,
+          "nnls_n_minus_1": false,
+          "plot_peaks_details": true,
+          "param_evolution": true
+        },
+        "use_template_variants": true,
+        "template_variant_ratios": [
+          0.1,
+          0.18888888888888888,
+          0.2777777777777778,
+          0.3666666666666667,
+          0.4555555555555556,
+          0.5444444444444445,
+          0.6333333333333333,
+          0.7222222222222222,
+          0.8111111111111111,
+          0.9
+        ],
+        "template_variant_superslow_fracs": [
+          0.1,
+          0.18,
+          0.26,
+          0.33999999999999997,
+          0.42000000000000004,
+          0.5,
+          0.58,
+          0.66,
+          0.74,
+          0.82,
+          0.9
+        ],
+        "superslow_min_ratio": 1.0,
+        "allow_tau_slow_override": true,
+        "force_tau_slow_override": false,
+        "jitter_variant_ms": [
+          -2.0,
+          -1.5,
+          -1.0,
+          -0.5,
+          0.0,
+          0.5,
+          1.0,
+          1.5,
+          2.0
+        ]
+      }
+    }
+  },
+  "environment": {
+    "python": "3.11.15",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "packages": {
+      "numpy": "1.26.4",
+      "scipy": "1.13.1",
+      "pandas": "2.3.3",
+      "matplotlib": "3.11.1",
+      "seaborn": "0.13.2",
+      "scikit-learn": "1.9.0",
+      "statsmodels": "0.14.6",
+      "openpyxl": "3.1.5"
+    }
+  },
+  "git": {
+    "commit": "567af748df7f4f21ac0aebfbc0e4900862fbaf39",
+    "dirty": true
+  }
+}
