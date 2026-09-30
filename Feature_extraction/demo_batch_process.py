@@ -159,7 +159,7 @@ def _build_options_presets(peak_window_ms, pre_zoom_s, post_zoom_s):
             'onset_baseline_threshold': 0.10,                               # Threshold (fraction of peak) for baseline_threshold onset detection
             
             # --- PPR Safety ---
-            'amplitude_floor_to_noise': True,                               # Floor all pulse amplitudes to the per-trial A1 threshold (thr1) before PPR; average uses median(thr1)
+            'amplitude_floor_to_noise': True,                               # Floor per-trial pulse amplitudes to the per-trial A1 threshold (thr1) before per-trial PPR; the average trace is not floored (see next option)
             'average_amplitude_floor_to_noise': False,                      # Separate control for average trace floor; None => follow amplitude_floor_to_noise
             'average_null_N': None,                                         # Separate null_N multiplier for average trace floor; None => follow null_N
             
