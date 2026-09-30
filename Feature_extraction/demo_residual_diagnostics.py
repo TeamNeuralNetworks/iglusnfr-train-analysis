@@ -50,7 +50,7 @@ from dataset_tools import raw_loader
 # ---------------------------------------------------------------------------
 
 DATA_ROOT = os.path.abspath(os.environ.get(
-    "GLUSNFR_DATA_ROOT", os.path.join(os.path.expanduser("~"), "Desktop", "FINAL PUBLICATION TEST PROCESS")
+    "GLUSNFR_DATA_ROOT", os.path.join(os.path.dirname(os.path.abspath(__file__)), os.pardir, "PPR_DATA_FINAL")
 ))
 TARGET_LEGACY_ID = "20211125_linescan1_20Hz_10pulses_4mMCa_bouton1_traces_converted"
 TARGET_CONDITION = "Theo_4Ca"  # only used to disambiguate; set to None otherwise

@@ -19,7 +19,7 @@ REPO_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
 
 # --- Data paths ---
 DATA_ROOT = os.path.abspath(os.environ.get(
-    "GLUSNFR_DATA_ROOT", os.path.join(os.path.expanduser("~"), "Desktop", "FINAL PUBLICATION TEST PROCESS")
+    "GLUSNFR_DATA_ROOT", os.path.join(os.path.dirname(os.path.abspath(__file__)), os.pardir, "PPR_DATA_FINAL")
 ))
 OUT_DIR = os.path.join(DATA_ROOT, "Testout")
 

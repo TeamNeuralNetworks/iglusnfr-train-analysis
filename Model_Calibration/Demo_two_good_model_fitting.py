@@ -29,7 +29,7 @@ except Exception:  # pragma: no cover - allow running as script
 # Data input settings
 REPO_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
 DATA_ROOT = os.path.abspath(os.environ.get(
-    "GLUSNFR_DATA_ROOT", os.path.join(os.path.expanduser("~"), "Desktop", "FINAL PUBLICATION TEST PROCESS")
+    "GLUSNFR_DATA_ROOT", os.path.join(os.path.dirname(os.path.abspath(__file__)), os.pardir, "PPR_DATA_FINAL")
 ))
 DEFAULT_CONDITION = "WT_Anthime"  # Default condition, looked up in the manifest
 

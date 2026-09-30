@@ -35,9 +35,9 @@ EVENT_INDEX = None  # Set to 0 for event 1, 2 for event 3, etc. Use None for all
 #        python demo_adjust_fit_events.py Theo_4Ca
 #  2. Set environment variable GLUSNFR_IN_CONDITION
 #        (Windows) set GLUSNFR_IN_CONDITION=Theo_4Ca
-#  3. Set GLUSNFR_DATA_ROOT, or use the default local publication release root
+#  3. Set GLUSNFR_DATA_ROOT, or extract the Zenodo data to <repo>/PPR_DATA_FINAL (default)
 DATA_ROOT = os.path.abspath(os.environ.get(
-    "GLUSNFR_DATA_ROOT", os.path.join(os.path.expanduser("~"), "Desktop", "FINAL PUBLICATION TEST PROCESS")
+    "GLUSNFR_DATA_ROOT", os.path.join(os.path.dirname(os.path.abspath(__file__)), os.pardir, "PPR_DATA_FINAL")
 ))
 DEFAULT_CONDITION = "Theo_1_5Ca"
 

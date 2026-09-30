@@ -40,9 +40,8 @@ def _dir():
     if env_root:
         candidates.append(Path(env_root) / "release")
     candidates.extend([
-        Path.home() / "Desktop" / "FINAL PUBLICATION TEST PROCESS" / "release",
+        Path(__file__).resolve().parent.parent / "PPR_DATA_FINAL" / "release",
         Path.cwd() / "PPR_DATA_FINAL" / "release",
-        Path.home() / "Desktop" / "Publication_test" / "release",
     ])
     for candidate in candidates:
         if (candidate / "boutons.csv").is_file():
